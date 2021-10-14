@@ -16,6 +16,6 @@ Um jogo de pong feito na Godot
 
 ![](https://github.com/ifpeopensource/pong/blob/main/Images/imagem_2021-10-14_130423.png)
 
-* Voilà, projeto prontíssimo para você modificar!
+* Voilà, projeto prontíssimo para você modificar e estudar!
 
 ![](https://github.com/ifpeopensource/pong/blob/main/Images/imagem_2021-10-14_130450.png)

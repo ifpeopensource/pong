@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://res/fonts/Freshman.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://src/GameOver.gd" type="Script" id=2]
+[ext_resource path="res://res/images/patetic.jpg" type="Texture" id=3]
+[ext_resource path="res://res/images/Jogar novamente.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 1 )
+
+[node name="GameOver" type="Node"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 642.897, 290.494 )
+scale = Vector2( 0.751721, 0.751721 )
+texture = ExtResource( 3 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -225.0
+margin_top = -98.0
+margin_right = 225.0
+margin_bottom = -31.0
+texture_normal = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="p1" type="Label" parent="."]
+anchor_right = 0.088
+anchor_bottom = 0.221
+margin_left = 561.516
+margin_top = 544.564
+margin_right = 793.876
+margin_bottom = 658.444
+custom_fonts/font = SubResource( 1 )
+text = "Player 1 wins"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="p2" type="Label" parent="."]
+anchor_right = 0.088
+anchor_bottom = 0.221
+margin_left = 563.635
+margin_top = 544.564
+margin_right = 795.995
+margin_bottom = 658.444
+custom_fonts/font = SubResource( 1 )
+text = "Player 2 wins"
+__meta__ = {
+"_edit_use_anchors_": false
+}

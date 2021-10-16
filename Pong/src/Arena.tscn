@@ -5,7 +5,7 @@
 [ext_resource path="res://src/ball/ball.gd" type="Script" id=3]
 [ext_resource path="res://src/bot/Bot.gd" type="Script" id=4]
 [ext_resource path="res://src/Arena.gd" type="Script" id=5]
-[ext_resource path="res://res/fonts/Pixeled.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://res/fonts/Freshman.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://res/images/ball.png" type="Texture" id=7]
 [ext_resource path="res://res/images/1.png" type="Texture" id=8]
 [ext_resource path="res://res/images/map.png" type="Texture" id=9]
@@ -23,11 +23,6 @@ extents = Vector2( 13, 78 )
 
 [sub_resource type="CircleShape2D" id=3]
 radius = 22.0
-
-[sub_resource type="DynamicFont" id=4]
-size = 28
-use_filter = true
-font_data = ExtResource( 6 )
 
 [sub_resource type="Shader" id=5]
 code = "/*
@@ -284,6 +279,10 @@ shader_param/clip_warp = false
 shader_param/vignette_intensity = 0.4
 shader_param/vignette_opacity = 0.5
 
+[sub_resource type="DynamicFont" id=7]
+size = 60
+font_data = ExtResource( 6 )
+
 [node name="Arena" type="Node"]
 script = ExtResource( 5 )
 
@@ -348,24 +347,24 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="tv" type="ColorRect" parent="CanvasLayer/Control"]
+material = SubResource( 6 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Label" type="Label" parent="CanvasLayer/Control"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -387.5
 margin_right = 387.5
 margin_bottom = 101.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 7 )
 text = "0 / 0"
 align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="tv" type="ColorRect" parent="CanvasLayer/Control"]
-material = SubResource( 6 )
-anchor_right = 1.0
-anchor_bottom = 1.0
-mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -1,6 +1,6 @@
 extends Node
 
-var pontos = [0,0]
+var pontos = Global.pontos
 var cor: = 0.0
 
 var explosion = preload("res://src/explosion.tscn")
@@ -24,3 +24,10 @@ func goal(player: bool, position: Vector2):
 	expl.position = position
 	add_child(expl)
 	expl.emitting = true
+	
+	if pontos[0] or pontos[1] >= 2:
+		Global.pontos = pontos
+		get_tree().change_scene("res://src/GameOver.tscn")
+
+func _ready():
+	$Bot.player = Global.multiplayers
